@@ -1,0 +1,19 @@
+﻿@model WebApplication1.Models.UserAnswer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="abstract" content="width=device-width" />
+    <title>Result</title>
+</head>
+<body>
+    <p>
+        <h1>Your results, @Model.Name</h1>
+        <a>Points - @Model.Points</a>
+    </p>
+    <p>Click <a asp-action="ResultTable">here</a> to see results table</p>
+</body>
+</html>

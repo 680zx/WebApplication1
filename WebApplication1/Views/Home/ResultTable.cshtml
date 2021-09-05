@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebApplication1.Models.UserAnswer>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="abstract" content="width=device-width" />
+    <title>Results Table</title>
+</head>
+<body>
+    <h2>Results table:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (WebApplication1.Models.UserAnswer user in Model)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Points</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

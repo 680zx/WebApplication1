@@ -23,9 +23,23 @@ namespace WebApplication1.Controllers
             return View();
         }
         
+        [HttpGet]
         public ViewResult Quiz()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ViewResult Quiz(UserAnswer userAnswer)
+        {
+            Repository.AddUserAnswer(userAnswer);
+            return View("Result", userAnswer);
+        }
+
+        [HttpGet]
+        public ViewResult ResultTable()
+        {
+            return View(Repository.UserAnswers.ToList().OrderByDescending(i => i.Points));
         }
     }
 }

@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class User
+    public class UserAnswer
     {
         public string Name { get; set; }
 
-        public int Point { get; set; }
+        public int Points { get; set; }
 
-        public bool? IsLiked { get; set; }
+        public bool IsLiked { get; set; }
     }
 }
