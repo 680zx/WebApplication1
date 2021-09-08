@@ -8,12 +8,15 @@
 <head>
     <meta name="abstract" content="width=device-width" />
     <title>Result</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <p>
-        <h1>Your results, @Model.Name</h1>
-        <a>Points - @Model.Points</a>
-    </p>
-    <p>Click <a asp-action="ResultTable">here</a> to see results table</p>
+    <div class="text-sm-center">
+        <p>
+            <h1>Your results, @Model.Name</h1>
+            <a>Points - @Model.Points</a>
+        </p>
+        <p>Click <a asp-action="ResultTable">here</a> to see results table</p>
+    </div>
 </body>
 </html>

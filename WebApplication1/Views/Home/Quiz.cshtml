@@ -7,13 +7,13 @@
 <head>
     <meta name="abstract" content="width=device-width" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="/css/Style.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div>
+    <div class="text-md-center">
         <h1>#QUIZ Page</h1>
     </div>
-    <div asp-validation-summary="All">
+    <div class="text-black-50" asp-validation-summary="All">
         <form asp-action="Quiz" method="post">
             <p>
                 <label asp-for="Name">Your Name: </label>
@@ -30,7 +30,7 @@
                                     inheritance), retaining similar implementation.                     </option>
                 </select>
             </p>
-            <button type="submit">Submit quiz</button>
+            <button class="btn-dark" type="submit">Submit quiz</button>
         </form>
     </div>
 </body>

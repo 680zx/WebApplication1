@@ -8,25 +8,28 @@
 <head>
     <meta name="abstract" content="width=device-width" />
     <title>Results Table</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <h2>Results table:</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Points</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (WebApplication1.Models.UserAnswer user in Model)
-            {
+    <div class="text-lg-center">
+        <h2>Results table:</h2>
+        <table>
+            <thead>
                 <tr>
-                    <td>@user.Name</td>
-                    <td>@user.Points</td>
+                    <th>Name</th>
+                    <th>Points</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (WebApplication1.Models.UserAnswer user in Model)
+                {
+                    <tr>
+                        <td>@user.Name</td>
+                        <td>@user.Points</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
