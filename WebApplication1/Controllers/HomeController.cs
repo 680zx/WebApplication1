@@ -28,10 +28,13 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ViewResult Quiz(UserAnswer userAnswer)
         {
-            Repository.AddUserAnswer(userAnswer);
-            return View("Result", userAnswer);
+            if (ModelState.IsValid)
+            {
+                Repository.AddUserAnswer(userAnswer);
+                return View("Result", userAnswer);
+            }
+            else return View();
         }
-
         [HttpGet]
         public ViewResult ResultTable()
         {
